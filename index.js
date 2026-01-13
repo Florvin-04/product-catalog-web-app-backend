@@ -14,9 +14,12 @@ import { authenticateAccessToken } from "./middlewares/authentication.js";
 import cookieParser from "cookie-parser";
 
 const app = express();
-const port = 5001;
+// const port = 5001;
 
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://product-catalog-web-app-frontend.vercel.app",
+];
 
 app.use(
   cors({
@@ -87,8 +90,8 @@ Category Routes
 app.post("/api/category/add", addCategory);
 app.get("/api/categories", getCategories);
 
-app.listen(port, () => {
-  console.log(`Backend running on http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Backend running on http://localhost:${port}`);
+// });
 
-// export default app;
+export default app;
