@@ -1,0 +1,1 @@
+ALTER TABLE "product_categories" ADD CONSTRAINT "product_categories_product_id_category_id_pk" PRIMARY KEY("product_id","category_id");
